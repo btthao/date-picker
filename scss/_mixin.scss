@@ -1,0 +1,12 @@
+@use "./custom" as *;
+@mixin circle {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+}

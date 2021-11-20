@@ -1,0 +1,16 @@
+{
+    "name": "date-picker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "compile:sass": "sass --watch scss:style"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "^5.1.3",
+        "sass": "^1.43.4"
+    }
+}

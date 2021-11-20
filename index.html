@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Date picker</title>
+    <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body>
+    <div class="container-sm py-2 px-4 calendar-container">
+        <div id="calendar" class="row shadow-sm rounded m-auto">
+            <div class="col-md-5 bg-primary rounded position-relative ">
+                <div id="today-date" class="mt-5 text-center w-100">
+                </div>
+                <div class="form-switch switch-container">
+                    <span>VN</span>
+                    <input class="form-check-input switch" type="checkbox" id="flexSwitchCheckChecked" checked />
+                    <span>EN</span>
+                </div>
+                <div id='date-picked'>
+                </div>
+            </div>
+            <div class='col-md-7 calendar-table text-primary '>
+                <div class="d-flex align-items-center justify-content-between mb-3 px-4">
+                    <span id="prev-month">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                    </span>
+                    <h4 id='calendar-head'></h4>
+                    <span id="next-month">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </span>
+                </div>
+                <table class="table text-center">
+                    <thead>
+                        <tr id='calendar-days'>
+                        </tr>
+                    </thead>
+                    <tbody id='calendar-body' class="text-muted table-body">
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <script src='./index.js'></script>
+</body>
+
+</html>

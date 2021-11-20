@@ -1,0 +1,11 @@
+$purple: #b584dc;
+$black: #353d4c;
+$pink: #ba5858;
+$gray: #e6e3df;
+$primary: $black;
+$secondary: $purple;
+$form-check-input-checked-color: $secondary;
+$form-check-input-checked-bg-color: $secondary;
+$form-check-input-bg: $secondary;
+$cell-height: 3rem;
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

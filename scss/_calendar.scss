@@ -1,0 +1,100 @@
+@use "./custom" as *;
+@use "./mixin" as *;
+.calendar-container {
+    max-width: 66rem;
+    min-width: 30rem;
+    color: $gray;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    @include media-breakpoint-up(md) {
+        margin-top: 5rem;
+    }
+    #calendar {
+        background: $gray;
+        .calendar-table {
+            padding-top: 2.4rem;
+            height: $cell-height * 10;
+            table {
+                table-layout: fixed;
+                .table-body {
+                    td {
+                        padding: 0;
+                        vertical-align: middle;
+                        height: $cell-height;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.switch-container {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    .switch {
+        margin-left: 0 !important;
+        cursor: pointer;
+    }
+}
+
+#date-picked {
+    height: 4rem;
+    text-align: center;
+    margin-top: 1rem;
+    @include media-breakpoint-up(md) {
+        margin-top: 4rem;
+    }
+    >h6 {
+        margin-bottom: 0;
+    }
+    >p {
+        color: $secondary;
+    }
+}
+
+th,
+td,
+#calendar-head {
+    user-select: none;
+}
+
+.current-month {
+    color: $primary;
+    font-weight: 500;
+    &.can-pick {
+        cursor: pointer;
+        font-weight: 700;
+        color: $secondary !important;
+        &.picked {
+            background: $primary;
+        }
+        &:hover {
+            background: $primary;
+        }
+    }
+}
+
+#prev-month,
+#next-month {
+    cursor: pointer;
+}
+
+.christmas {
+    position: relative;
+    z-index: 1;
+    color: $gray;
+    &::after {
+        @include circle;
+        background: $pink;
+    }
+}
+
+.today {
+    position: relative;
+    z-index: 1;
+    &::after {
+        @include circle;
+        background: $secondary;
+    }
+}
